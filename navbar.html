@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+            :root {
+      --primary: #4f46e5;
+      --secondary: #facc15;
+      --dark: #111827;
+      --light: #f3f4f6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #1f2937, #111827);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(19, 24, 35, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      display: flex;
+      font-weight: 800;
+      background: linear-gradient(45deg, var(--primary), #7c3aed);
+      background-clip: text;
+      /* -webkit-background-clip: text; */
+      -webkit-text-fill-color: transparent;
+    }
+    .logo img{
+        padding-left: 2.25rem÷;
+        height: 5rem;
+        width: 7rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;    
+      gap: 2rem;
+      list-style: none;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(79, 70, 229, 0.1);
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+        /* Animations */
+        @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(17, 24, 39, 0.98);
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+        align-items: end;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <img src="https://media-hosting.imagekit.io/f7d44cf76c5f41c1/favicon.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JIeRx~yS3m9t5r~wLMCOvLjmI8UQdbW7BCbdvs-8GMAN5ITFU-aZwI1O52IPO5-sQfAU7ejfR2x0DYfJmq7vHnh1U5wV0Cl1EbUZvdkRFz1p46UGj~GI1j0dVxoS27~r~aZdjY5Ve1MRlHYzIp6T0u0urNDWlftfQx7Xc-R6pGV1~aXYwMVh-tbOD38DUHn7t9Ke6Tu8-oYKPkFRlddxCSwnfj4fgfxDwjXWgg7QySnUEtR7I563esTvWv03KO9Wu0yd1po6O0vszIMhswmX6S4-XGmjLg051tEwRNCo1QGCXxJyp4BRkY76mdLDYdNRaiv70bstSPNr7A8Z7t1nfQ__" alt="Logo"> <br>
+            </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#join">Join</a></li>
+          </ul>
+          <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+      <script src="script.js"></script>
+</body>
+</html>
