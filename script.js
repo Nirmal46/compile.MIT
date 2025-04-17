@@ -42,6 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Join function
-function join() {
-  alert("Coming Soon! Stay Tuned!");
-}
+// function join() {
+//   alert("Coming Soon! Stay Tuned!");
+// }
+// const menuBtn = document.querySelector('.mobile-menu-btn');
+//     const navLinks = document.querySelector('.nav-links');
+//     const darkModeToggle = document.getElementById('darkModeToggle');
+//     const body = document.body;
+
+//     menuBtn.addEventListener('click', () => {
+//       navLinks.classList.toggle('active');
+//     });
+
+//     // Toggle Dark Mode
+//     darkModeToggle.addEventListener('click', () => {
+//       body.classList.toggle('dark-mode');
+//       const isDarkMode = body.classList.contains('dark-mode');
+//       darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+//     });

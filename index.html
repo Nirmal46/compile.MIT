@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.html">
   <link rel="icon" href="https://media-hosting.imagekit.io/64ff49dede3c4a0e/logo.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bMeIY9PAXS~zpFPgrc~gJF680UX8J8efQP6nj1g8TzVFJtHT5p3cuyT0GFyVyMPPYSaRIkZW1GkpwnjwtlFw6LOEOHrFJ4d26FkX5yNFtZ1d1jgHoXtLdHEB-sPk6IK0jpxhB6JqbHL9gLnss2-YQ5E6MJqxpEqvmweGqtaWuesyJNboPCrya80Bl1pBtT5ey-07elTgcwlqv2~yAwQV9-7LxrcoySt4MxBPEpFaK2CIaWFNkHaUq1R6UUveY5bcJoCH06ZcjN4YlagCIMgEY6UPIHKygd878uNId1TofsJ8Vsp7swNQBxv4qzh8HRdPwr4-NhglDZiOanMhEhHCIA__">
 </head>
 
@@ -66,7 +67,7 @@
         <h4>Bishowdeep Sharma</h4>
         <p>Tech Lead</p>
         <div class="social-links">
-          <a target="_blank" href="https://www.instagram.com//"><i class="fab fa-linkedin"></i></a>
+          <!-- <a target="_blank" href="https://www.instagram.com//"><i class="fab fa-linkedin"></i></a> -->
           <a target="_blank" href="https://github.com/Bishowdeep"><i class="fab fa-github"></i></a>
           <a target="_blank" href="https://www.instagram.com/bishow_deep/"><i class="fab fa-instagram"></i></a>
         </div>
@@ -140,7 +141,7 @@
         <h3>Women In IT</h3>
         <p>
           <img src="https://media-hosting.imagekit.io/b3316f230e9c4d9d/WIIT.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=D5cOAGcmreqEmthITn1gl3ugDosHyw8Mi7PjYsqM7usXl3xBu3taoPmG02samWTZ7-aMro1MblwvElmMbOaXqNYC~kOsj6g-6LNATavtWDOBTPcyhxdOqxIfAwIjfIfI6op6L9LsfIt11uT4BYrEWKF5GI1lToYO9ZmL9RuUxER6yLk7GLXadS8d7knsoZaU-xIbZ4CygX72Fb7IXO7sskdnhbolNySwkcn7gDgv0ckLW5ahtqr4mKx6fN1nPaw2Nu6CCwNcdqm4JigfjWmSQc7yjsFerGN9DrtQaSMIWQ5zyuZQC8AjgW7SF9HSx9-Q9e~kynSJEOUYbPYKVpYPdA__" alt="picture">
-          An inspiring initiative to empower and uplift women in tech.
+          An inspiring initiative to empower and uplift women in tech. #WIIT2025 👩‍💻
         </p>
       </div>
       <div class="feature-card">
@@ -170,8 +171,10 @@
   <section class="cta-section" id="join">
     <h2>Ready to Join Our Community?</h2>
     <p>Start your tech journey with us today</p>
-    <a href="#"> <button class="join-btn" id="join" onclick="join()">Apply Now <i
-          class="fas fa-paper-plane"></i></button></a>
+    <!-- <a href="#"> <button class="join-btn" id="join" onclick="join()">Apply Now <i
+          class="fas fa-paper-plane"></i></button></a> -->
+          <a href="register.html"> <button class="join-btn" id="join">Apply Now <i
+            class="fas fa-paper-plane"></i></button></a>
   </section>
   <!-- Footer -->
   <!-- <footer>
@@ -185,6 +188,23 @@
   </footer> -->
 
   <script src="script.js"></script>
+  <script>
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Toggle Dark Mode
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
 </body>
 
 </html>
