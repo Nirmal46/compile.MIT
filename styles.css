@@ -228,7 +228,7 @@ body {
   padding: 4rem 2rem;
   text-align: center;
   margin-top: 1rem;
-  background: #fefce8;
+  background: var(--light-gray);
 }
 
 .join-btn {
@@ -280,6 +280,9 @@ footer p{
 }
 
 /* Events Section */
+.events{
+  background-color: var(--light-gray);
+}
 .events h2 {
   text-align: center;
   padding: 2rem;
